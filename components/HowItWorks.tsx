@@ -80,6 +80,8 @@ export default function HowItWorks({ defaultTab }: HowItWorksProps) {
             className={`m-auto max-w-[280px] rounded-full mb-10 ${
               theme === "dark" ? "bg-[#001F22]" : "bg-[#f0f0f0]"
             }`}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
           >
             {data.map(({ label, value }) => (
               <Tab
@@ -87,6 +89,8 @@ export default function HowItWorks({ defaultTab }: HowItWorksProps) {
                 key={value}
                 value={value}
                 className=""
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
               >
                 <p
                   className={`font-manrope font-medium ${
@@ -105,6 +109,8 @@ export default function HowItWorks({ defaultTab }: HowItWorksProps) {
               unmount: { y: 250 },
             }}
             placeholder={undefined}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
           >
             {data.map(({ value, desc }) => (
               <TabPanel key={value} value={value}>
