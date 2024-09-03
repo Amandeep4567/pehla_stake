@@ -20,8 +20,6 @@ const sectors = [
   { name: "Foods and Beverages", subSectors: [] },
 ];
 
-  
-  
 const InvestorsType = ["SOLEINVESTOR", "PARTNER", "STAKEHOLDER"];
 
 interface FilterProps {
@@ -65,13 +63,20 @@ export function FilterSearchForInvestors({
       yearRange,
     });
   };
-  
+
   const [style, setStyle] = useState({});
-  
+
   const [minInvestment, setMinInvestment] = useState<number>(0);
   const [maxInvestment, setMaxInvestment] = useState<number>(200000);
-  
-  console.log(investorsType, selectedLocations, selectedSectors, yearRange, minInvestment, maxInvestment)
+
+  console.log(
+    investorsType,
+    selectedLocations,
+    selectedSectors,
+    yearRange,
+    minInvestment,
+    maxInvestment
+  );
   const handleMinChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = Number(e.target.value);
     setMinInvestment(value);
@@ -155,7 +160,7 @@ export function FilterSearchForInvestors({
       maxInvestment: Infinity,
       yearRange: { startYear: null, endYear: null },
     });
-    
+
     setInvestorsType([]);
     setSelectedLocations([]);
     setSelectedSectors([]);
@@ -182,7 +187,7 @@ export function FilterSearchForInvestors({
         subSector.toLowerCase().includes(sectorSearchQuery.toLowerCase())
       )
   );
-  console.log('filters')
+  console.log("filters");
   return (
     <>
       {isFilterVisible && (
@@ -198,6 +203,8 @@ export function FilterSearchForInvestors({
                 theme === "dark" ? "text-white" : "text-black"
               }`}
               placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               <Image
                 src="/filter.svg"
@@ -223,6 +230,8 @@ export function FilterSearchForInvestors({
                 theme === "dark" ? "text-white" : "text-black"
               }`}
               placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Applied Filters
             </Typography>
@@ -256,6 +265,8 @@ export function FilterSearchForInvestors({
                 theme === "dark" ? "text-white" : "text-black"
               } font-semibold mb-2`}
               placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Investor Type
             </Typography>
@@ -283,6 +294,8 @@ export function FilterSearchForInvestors({
                 theme === "dark" ? "text-white" : "text-black"
               } font-semibold mb-2`}
               as="h3" // Use appropriate element for Typography
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Location
             </Typography>
@@ -343,6 +356,8 @@ export function FilterSearchForInvestors({
                 theme === "dark" ? "text-white" : "text-black"
               } font-semibold mb-2`}
               as="h3"
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Sector
             </Typography>
@@ -403,6 +418,8 @@ export function FilterSearchForInvestors({
                 theme === "dark" ? "text-white" : "text-black"
               } font-semibold mb-2`}
               as="h3"
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Investment Range
             </Typography>
@@ -494,6 +511,8 @@ export function FilterSearchForInvestors({
                 theme === "dark" ? "text-white" : "text-black"
               } font-semibold mb-2`}
               as="h3"
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Year Of Establishment
             </Typography>

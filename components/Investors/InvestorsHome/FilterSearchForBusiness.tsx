@@ -244,6 +244,8 @@ export function FilterSearchForBusiness({
               className={`text-[16px] font-manrope font-light tracking-wider capitalize ${
                 theme === "dark" ? "text-white" : "text-[#00171A]"
               }`}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               <Image
                 src="/filter.svg"
@@ -267,6 +269,8 @@ export function FilterSearchForBusiness({
                 theme === "dark" ? "text-white" : "text-[#00171A]"
               }font-semibold font-manrope`}
               placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Applied Filters
             </Typography>
@@ -299,6 +303,8 @@ export function FilterSearchForBusiness({
               className={`font-semibold mb-2 ${
                 theme === "dark" ? "text-white" : "text-[#00171A]"
               }`}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Businesses looking for
             </Typography>
@@ -330,6 +336,8 @@ export function FilterSearchForBusiness({
               className={`font-semibold mb-2 ${
                 theme === "dark" ? "text-white" : "text-[#00171A]"
               }`}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Legal Entity
             </Typography>
@@ -362,6 +370,8 @@ export function FilterSearchForBusiness({
               className={`font-semibold mb-2 ${
                 theme === "dark" ? "text-white" : "text-[#00171A]"
               }`}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Location
             </Typography>
@@ -426,6 +436,8 @@ export function FilterSearchForBusiness({
               className={`font-semibold mb-2 ${
                 theme === "dark" ? "text-white" : "text-[#00171A]"
               }`}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Sector
             </Typography>
@@ -493,6 +505,8 @@ export function FilterSearchForBusiness({
               className={`font-semibold mb-2 ${
                 theme === "dark" ? "text-white" : "text-[#00171A]"
               }`}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Investment Range
             </Typography>
@@ -578,6 +592,8 @@ export function FilterSearchForBusiness({
               className={`font-semibold mb-2 ${
                 theme === "dark" ? "text-white" : "text-[#00171A]"
               }`}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Year Of Establishment
             </Typography>

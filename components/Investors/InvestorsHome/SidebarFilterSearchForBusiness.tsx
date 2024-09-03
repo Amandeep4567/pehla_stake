@@ -253,6 +253,8 @@ export const SidebarFilterSearchForBusiness: React.FC<
         overlayProps={{ className: "fixed inset-0 bg-black bg-opacity-50" }}
         style={{ overflow: "auto", height: "100vh" }}
         placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
       >
         <div className="mb-6 flex items-center justify-between">
           <p className="font-semibold text-[22px] dark:text-[#B8FF22] text-[#248E38]">
@@ -266,6 +268,8 @@ export const SidebarFilterSearchForBusiness: React.FC<
             onClick={closeDrawer}
             className="ml-auto"
             placeholder={undefined}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
           >
             <XMarkIcon className="h-5 w-5" />
           </IconButton>
@@ -394,6 +398,8 @@ export const SidebarFilterSearchForBusiness: React.FC<
               className={`font-semibold mb-2 ${
                 theme === "dark" ? "text-white" : "text-[#00171A]"
               }`}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Year Of Establishment
             </Typography>
@@ -447,6 +453,8 @@ export const SidebarFilterSearchForBusiness: React.FC<
               className={`font-semibold mb-2 ${
                 theme === "dark" ? "text-white" : "text-[#00171A]"
               }`}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Investment Range
             </Typography>

@@ -209,6 +209,8 @@ export function SidebarFilterSearchForInvestors({
         overlayProps={{ className: "fixed inset-0 bg-black bg-opacity-50" }}
         style={{ overflow: "auto", height: "100vh" }}
         placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
       >
         <div className="mb-6 flex items-center justify-between">
           <p className="font-semibold text-[22px] dark:text-[#B8FF22] text-[#248E38]">
@@ -222,6 +224,8 @@ export function SidebarFilterSearchForInvestors({
             onClick={closeDrawer}
             className="ml-auto"
             placeholder={undefined}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
           >
             <XMarkIcon className="h-5 w-5" />
           </IconButton>
@@ -236,6 +240,8 @@ export function SidebarFilterSearchForInvestors({
                 theme === "dark" ? "text-white" : "text-black"
               }`}
               placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Applied Filters
             </Typography>
@@ -269,6 +275,8 @@ export function SidebarFilterSearchForInvestors({
                 theme === "dark" ? "text-white" : "text-black"
               } font-semibold mb-2`}
               placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Investor Type
             </Typography>
@@ -296,6 +304,8 @@ export function SidebarFilterSearchForInvestors({
                 theme === "dark" ? "text-white" : "text-black"
               } font-semibold mb-2`}
               as="h3" // Use appropriate element for Typography
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Location
             </Typography>
@@ -356,6 +366,8 @@ export function SidebarFilterSearchForInvestors({
                 theme === "dark" ? "text-white" : "text-black"
               } font-semibold mb-2`}
               as="h3"
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Sector
             </Typography>
@@ -416,6 +428,8 @@ export function SidebarFilterSearchForInvestors({
                 theme === "dark" ? "text-white" : "text-black"
               } font-semibold mb-2`}
               as="h3"
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Investment Range
             </Typography>
@@ -507,6 +521,8 @@ export function SidebarFilterSearchForInvestors({
                 theme === "dark" ? "text-white" : "text-black"
               } font-semibold mb-2`}
               as="h3"
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Year Of Establishment
             </Typography>

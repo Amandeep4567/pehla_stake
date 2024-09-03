@@ -2,7 +2,7 @@ import { Card, CardHeader, CardBody } from "@material-tailwind/react";
 import React from "react";
 import { useRouter } from "next/router";
 import { delBusiness } from "@/hooks/useBusiness";
-import {  deletereportbusiness } from "../../../hooks/useReports";
+import { deletereportbusiness } from "../../../hooks/useReports";
 
 interface ReportedUserCardProps {
   user: {
@@ -26,7 +26,7 @@ const ReportedUserCard: React.FC<ReportedUserCardProps> = ({ user }) => {
 
   const handleDeleteReport = async () => {
     // Implement delete report functionality
-    await  deletereportbusiness(user.id);
+    await deletereportbusiness(user.id);
   };
 
   const handleTextUser = () => {
@@ -45,6 +45,8 @@ const ReportedUserCard: React.FC<ReportedUserCardProps> = ({ user }) => {
       shadow={false}
       className="w-full bg-[#003034] rounded-lg px-4 text-white"
       placeholder={undefined}
+      onPointerEnterCapture={undefined}
+      onPointerLeaveCapture={undefined}
     >
       <CardHeader
         color="transparent"
@@ -52,9 +54,11 @@ const ReportedUserCard: React.FC<ReportedUserCardProps> = ({ user }) => {
         shadow={false}
         className="mx-0 flex justify-between items-center gap-4 pt-0 pb-8 border-none rounded-none"
         placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
       >
         <img
-          src={'/avatar.svg'}
+          src={"/avatar.svg"}
           alt={user.businessName}
           width={50}
           height={50}
@@ -64,7 +68,12 @@ const ReportedUserCard: React.FC<ReportedUserCardProps> = ({ user }) => {
           {user.businessName}
         </p>
       </CardHeader>
-      <CardBody className="mb-6 p-0" placeholder={undefined}>
+      <CardBody
+        className="mb-6 p-0"
+        placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
+      >
         <p className="font-thin text-[14px] text-[#cccccc]">
           <strong>Reason:</strong> {user.reason}
         </p>

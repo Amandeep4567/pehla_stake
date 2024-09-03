@@ -11,18 +11,16 @@ import { useTheme } from "@/context/ThemeContext";
 import SidebarFilterSearchForFranchise from "./SidebarFilterSearchForFranchise";
 
 const businessesData: Business[] = [
-    {
-      id: "1",
-      name: "Sole Investor",
-      industry: "Technology",
-      State: "Kerala",
-      InvestmentRangeEnd: 150000,
-      type: "",
-      district:"kerela"
-     
-    },
-    
-  ];
+  {
+    id: "1",
+    name: "Sole Investor",
+    industry: "Technology",
+    State: "Kerala",
+    InvestmentRangeEnd: 150000,
+    type: "",
+    district: "kerela",
+  },
+];
 
 const SearchForFranchise = () => {
   const [isFilterVisible, setIsFilterVisible] = useState(false);
@@ -96,22 +94,21 @@ const SearchForFranchise = () => {
     );
   });
 
-  
-    const sortedBusinesses = filteredBusinesses.sort((a, b) => {
-      if (sortOption === "New") {
-        return a.type === "New" ? -1 : 1;
-      }
-      if (sortOption === "Old") {
-        return a.type === "Old" ? -1 : 1;
-      }
-      if (sortOption === "Investment Lowest") {
-        return a.InvestmentRangeEnd - b.InvestmentRangeEnd;
-      }
-      if (sortOption === "Investment Highest") {
-        return b.InvestmentRangeEnd - a.InvestmentRangeEnd;
-      }
-      return 0;
-    });
+  const sortedBusinesses = filteredBusinesses.sort((a, b) => {
+    if (sortOption === "New") {
+      return a.type === "New" ? -1 : 1;
+    }
+    if (sortOption === "Old") {
+      return a.type === "Old" ? -1 : 1;
+    }
+    if (sortOption === "Investment Lowest") {
+      return a.InvestmentRangeEnd - b.InvestmentRangeEnd;
+    }
+    if (sortOption === "Investment Highest") {
+      return b.InvestmentRangeEnd - a.InvestmentRangeEnd;
+    }
+    return 0;
+  });
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
@@ -183,6 +180,8 @@ const SearchForFranchise = () => {
                     onClick={toggleFilter}
                     className="flex items-center bg-[#cccccc] dark:bg-[#003034] text-[#00171A] dark:text-[#ffffff] text-[15px] rounded-full font-manrope font-light tracking-wider justify-center capitalize px-2 mt-4"
                     placeholder={undefined}
+                    onPointerEnterCapture={undefined}
+                    onPointerLeaveCapture={undefined}
                   >
                     <Image
                       src="/filter.svg"
@@ -222,6 +221,8 @@ const SearchForFranchise = () => {
                 placeholder=""
                 size="sm"
                 className="rounded-full bg-[#248E38] dark:bg-[#B8FF22]"
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
               >
                 <MagnifyingGlassIcon className="p-0 h-4 w-4" />
               </Button>

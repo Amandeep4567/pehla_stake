@@ -11,20 +11,15 @@ import { useTheme } from "@/context/ThemeContext";
 import { SidebarFilterSearchForBusiness } from "./SidebarFilterSearchForBusiness";
 
 const businessesData: Business[] = [
-
-  
-    {
-      id: "1",
-      name: "Sole Investor",
-      industry: "Technology",
-      State: "Kerala",
-      InvestmentRangeEnd: 150000,
-      type: "",
-      district:"kerela"
-     
-    },
-    
-  
+  {
+    id: "1",
+    name: "Sole Investor",
+    industry: "Technology",
+    State: "Kerala",
+    InvestmentRangeEnd: 150000,
+    type: "",
+    district: "kerela",
+  },
 ];
 
 const SearchForBusinesses = () => {
@@ -56,7 +51,6 @@ const SearchForBusinesses = () => {
   };
 
   const sortedBusinesses = [...businessesData].sort((a, b) => {
-
     if (sortOption === "New") {
       return a.type === "New" ? -1 : 1;
     }
@@ -94,7 +88,7 @@ const SearchForBusinesses = () => {
       business.InvestmentRangeEnd >= filters.minInvestment;
     const matchesMaxInvestment =
       filters.maxInvestment === undefined ||
-      business.InvestmentRangeEnd<= filters.maxInvestment;
+      business.InvestmentRangeEnd <= filters.maxInvestment;
 
     return (
       matchesLocation &&
@@ -177,6 +171,8 @@ const SearchForBusinesses = () => {
                     onClick={toggleFilter}
                     className="flex items-center bg-[#cccccc] dark:bg-[#003034] text-[#00171A] dark:text-[#ffffff] text-[15px] rounded-full font-manrope font-light tracking-wider justify-center capitalize px-2 mt-4"
                     placeholder={undefined}
+                    onPointerEnterCapture={undefined}
+                    onPointerLeaveCapture={undefined}
                   >
                     <Image
                       src="/filter.svg"
@@ -216,6 +212,8 @@ const SearchForBusinesses = () => {
                 placeholder=""
                 size="sm"
                 className="rounded-full bg-[#248E38] dark:bg-[#B8FF22]"
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
               >
                 <MagnifyingGlassIcon className="p-0 h-4 w-4" />
               </Button>

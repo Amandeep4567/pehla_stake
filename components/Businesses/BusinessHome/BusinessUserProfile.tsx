@@ -125,6 +125,8 @@ const BusinessUserProfile: React.FC = () => {
                 size="lg"
                 color="green"
                 placeholder={undefined}
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
               />
             </div>
             <p className="dark:text-[#A4E320] text-[#248E38]">

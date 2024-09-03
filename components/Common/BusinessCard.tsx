@@ -51,6 +51,8 @@ export function BusinessCard({ business }: BusinessCardProps) {
           : "bg-white text-[#00171A] border border-gray-400"
       } rounded-lg px-4`}
       placeholder={undefined}
+      onPointerEnterCapture={undefined}
+      onPointerLeaveCapture={undefined}
     >
       <CardHeader
         color="transparent"
@@ -58,6 +60,8 @@ export function BusinessCard({ business }: BusinessCardProps) {
         shadow={false}
         className="mx-0 flex justify-between items-center gap-4 pt-0 pb-8 border-none rounded-none"
         placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
       >
         <Image src={"/building.svg"} alt="building" width={50} height={50} />
         <p
@@ -85,11 +89,15 @@ export function BusinessCard({ business }: BusinessCardProps) {
           />
         )}
       </CardHeader>
-      <CardBody placeholder="" className="mb-6 p-0">
+      <CardBody
+        placeholder=""
+        className="mb-6 p-0"
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
+      >
         <p className="font-thin text-[14px] text-[#cccccc] text-justify">
           Investment opportunity in {district}, {State} requiring ₹
-          {InvestmentRangeEnd}. Established in{" "}
-          {establishedDate}.
+          {InvestmentRangeEnd}. Established in {establishedDate}.
         </p>
         <div
           className={`${

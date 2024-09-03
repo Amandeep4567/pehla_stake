@@ -24,6 +24,8 @@ export default function PrimaryButton({
           ? "hover:bg-[#103B3E] hover:text-white"
           : "text-[#003034]"
       } ${backgroundStyle} ${manrope.className}`}
+      onPointerEnterCapture={undefined}
+      onPointerLeaveCapture={undefined}
     >
       {title}
     </Button>

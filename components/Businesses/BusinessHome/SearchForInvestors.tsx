@@ -18,10 +18,8 @@ const InvestorsData: Business[] = [
     State: "Kerala",
     InvestmentRangeEnd: 150000,
     type: "",
-    district:"kerela"
-   
+    district: "kerela",
   },
-  
 ];
 
 const SearchForInvestors = () => {
@@ -145,6 +143,8 @@ const SearchForInvestors = () => {
                     onClick={toggleFilter}
                     className="flex items-center bg-[#cccccc] dark:bg-[#003034] text-[#00171A] dark:text-[#ffffff] text-[15px] rounded-full font-manrope font-light tracking-wider justify-center capitalize px-2 mt-4"
                     placeholder={undefined}
+                    onPointerEnterCapture={undefined}
+                    onPointerLeaveCapture={undefined}
                   >
                     <Image
                       src="/filter.svg"
@@ -183,6 +183,8 @@ const SearchForInvestors = () => {
                 placeholder=""
                 size="sm"
                 className="rounded-full bg-[#248E38] dark:bg-[#B8FF22]"
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
               >
                 <MagnifyingGlassIcon className="p-0 h-4 w-4" />
               </Button>

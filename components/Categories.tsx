@@ -1,5 +1,4 @@
 import { useTheme } from "@/context/ThemeContext";
-import CategoriesMiniCard from "./CategoriesMiniCard";
 import PrimaryButton from "./Common/PrimaryButton";
 import SecondaryButton from "./Common/SecondaryButton";
 import Link from "next/link";

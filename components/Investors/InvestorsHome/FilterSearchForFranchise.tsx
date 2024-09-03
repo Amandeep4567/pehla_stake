@@ -239,6 +239,8 @@ export function FilterSearchForFranchise({
                 theme === "dark" ? "text-white" : "text-black"
               }`}
               placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               <Image
                 src="/filter.svg"
@@ -262,6 +264,8 @@ export function FilterSearchForFranchise({
                 theme === "dark" ? "text-white" : "text-black"
               }`}
               placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Applied Filters
             </Typography>
@@ -294,6 +298,8 @@ export function FilterSearchForFranchise({
                 theme === "dark" ? "text-white" : "text-black"
               }`}
               placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Businesses looking for
             </Typography>
@@ -319,6 +325,8 @@ export function FilterSearchForFranchise({
                 theme === "dark" ? "text-white" : "text-black"
               }`}
               placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Legal Entity
             </Typography>
@@ -345,6 +353,8 @@ export function FilterSearchForFranchise({
                 theme === "dark" ? "text-white" : "text-black"
               }`}
               as="h3" // Use appropriate element for Typography
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Location
             </Typography>
@@ -411,6 +421,8 @@ export function FilterSearchForFranchise({
                 theme === "dark" ? "text-white" : "text-black"
               }`}
               as="h3"
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Sector
             </Typography>
@@ -477,6 +489,8 @@ export function FilterSearchForFranchise({
                 theme === "dark" ? "text-white" : "text-black"
               }`}
               as="h3"
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Investment Range
             </Typography>
@@ -557,6 +571,8 @@ export function FilterSearchForFranchise({
                 theme === "dark" ? "text-white" : "text-black"
               }`}
               as="h3"
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               Year Of Establishment
             </Typography>

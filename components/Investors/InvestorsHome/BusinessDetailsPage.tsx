@@ -52,6 +52,8 @@ const BusinessDetailsPage = () => {
                 size="lg"
                 color="green"
                 placeholder={undefined}
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
               />
             </div>
             <p

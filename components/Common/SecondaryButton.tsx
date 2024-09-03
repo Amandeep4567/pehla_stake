@@ -16,7 +16,8 @@ export default function SecondaryButton({
       placeholder="Button"
       className={`${backgroundStyle} ${manrope.className}`}
       variant="outlined"
-      // color="lime"
+      onPointerEnterCapture={undefined}
+      onPointerLeaveCapture={undefined} // color="lime"
     >
       {title}
     </Button>

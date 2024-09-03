@@ -99,6 +99,8 @@ const UserProfileBusiness = () => {
                 size="lg"
                 color="green"
                 placeholder={undefined}
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
               />
             </div>
             <p className="text-[#A4E320]">

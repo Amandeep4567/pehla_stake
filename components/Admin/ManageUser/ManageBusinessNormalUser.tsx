@@ -26,13 +26,13 @@ const ManageBusinessNormalUser = () => {
 
   useEffect(() => {
     const fn = async () => {
-    if (id) {
-      const selectedBusiness = await getBusiness(id)
-      console.log(selectedBusiness)
-      setBusiness(selectedBusiness);
-    }
-  }
-  fn()
+      if (id) {
+        const selectedBusiness = await getBusiness(id);
+        console.log(selectedBusiness);
+        setBusiness(selectedBusiness);
+      }
+    };
+    fn();
   }, []);
 
   const handleEditProfile = () => {
@@ -52,16 +52,14 @@ const ManageBusinessNormalUser = () => {
     });
   };
 
-  
   const handleHideAccount = () => {
     // Implement hide account functionality here
-    hideBusiness(id)
+    hideBusiness(id);
   };
 
-  const handleBanAccount =async  () => {
-    await delBusiness(id)
+  const handleBanAccount = async () => {
+    await delBusiness(id);
   };
-
 
   const handleViewDocument = () => {
     setModal({
@@ -119,6 +117,8 @@ const ManageBusinessNormalUser = () => {
                 size="lg"
                 color="green"
                 placeholder={undefined}
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
               />
             </div>
             <p className="text-[#A4E320]">
@@ -141,7 +141,7 @@ const ManageBusinessNormalUser = () => {
           <h4 className="text-md font-semibold">
             District:
             <span className="text-md text-gray-400 font-thin ml-2">
-            {business.district}, {business.State}
+              {business.district}, {business.State}
             </span>
           </h4>
           <h4 className="text-md font-semibold">

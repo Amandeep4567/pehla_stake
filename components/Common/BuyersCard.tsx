@@ -22,6 +22,8 @@ export const BuyersCard: React.FC<InvestorsCardProps> = ({ investors }) => {
           ? "bg-[#003034] text-white"
           : "bg-white text-[#00171A] border border-gray-400"
       }`}
+      onPointerEnterCapture={undefined}
+      onPointerLeaveCapture={undefined}
     >
       <CardHeader
         placeholder=""
@@ -29,6 +31,8 @@ export const BuyersCard: React.FC<InvestorsCardProps> = ({ investors }) => {
         floated={false}
         shadow={false}
         className="mx-0 flex justify-start items-center gap-4 pt-0 pb-4 rounded-none border-none"
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
       >
         <Image
           src={"/Buyers.svg"}
@@ -48,7 +52,12 @@ export const BuyersCard: React.FC<InvestorsCardProps> = ({ investors }) => {
           </p>
         </div>
       </CardHeader>
-      <CardBody placeholder="" className="mb-6 p-0">
+      <CardBody
+        placeholder=""
+        className="mb-6 p-0"
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
+      >
         <div className="text-justify mt-3">
           <p
             className={`text-[14px] sm:text-[15px] ${

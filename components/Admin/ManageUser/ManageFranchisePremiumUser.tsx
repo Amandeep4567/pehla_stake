@@ -96,7 +96,7 @@ const ManageFranchiseBusinessUser = () => {
         <div className="flex flex-col space-y-2 text-white">
           <div className="flex justify-between">
             <p className="text-[#EAD514] font-bold text-[24px]">
-            {business.name} in {business.district},{" "}{business.State}
+              {business.name} in {business.district}, {business.State}
               <br className="sm:block hidden" /> looking for Investment at{" "}
               {business.State}
             </p>
@@ -121,6 +121,8 @@ const ManageFranchiseBusinessUser = () => {
                 size="lg"
                 color="green"
                 placeholder={undefined}
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
               />
             </div>
             <p className="text-[#A4E320]">

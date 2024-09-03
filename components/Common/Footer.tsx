@@ -66,6 +66,8 @@ export function Footer() {
               placeholder=""
               variant="small"
               className={`pt-8 text-[13px] font-manrope sm:text-[15px] text-[#A4E320] ${manrope.className}`}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               23/1243, Chulliparambil, Papli Road, Veegaland{" "}
               <br className="hidden sm:block" /> Greenclouds Apartments,
@@ -128,6 +130,8 @@ export function Footer() {
                   variant="small"
                   color="blue-gray"
                   className={`mb-4 font-medium font-manrope text-[#8e8e8e] ${manrope.className}`}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
                 >
                   {title}
                 </Typography>
@@ -139,6 +143,8 @@ export function Footer() {
                         as="span"
                         color="white"
                         className={`py-1.5 font-manrope font-normal text-[13px] sm:text-[15px] transition-colors hover:text-[#cccccc] ${manrope.className}`}
+                        onPointerEnterCapture={undefined}
+                        onPointerLeaveCapture={undefined}
                       >
                         {link.name}
                       </Typography>
@@ -173,6 +179,8 @@ export function Footer() {
             placeholder=""
             variant="small"
             className={`text-center font-manrope font-normal mb-4 md:mb-0 text-[13px] sm:text-[15px] text-[#A4E320] ${manrope.className}`}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
           >
             © {currentYear} — Copyright
           </Typography>

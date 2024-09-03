@@ -17,6 +17,8 @@ export function PremiumCard() {
           ? "bg-[#003034] text-white"
           : "bg-white text-[#00171A] border border-gray-400"
       }`}
+      onPointerEnterCapture={undefined}
+      onPointerLeaveCapture={undefined}
     >
       <CardHeader
         placeholder={undefined}
@@ -24,6 +26,8 @@ export function PremiumCard() {
         floated={false}
         shadow={false}
         className="mx-0 flex justify-between items-center gap-4 pt-0 pb-8 border-none rounded-none"
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
       >
         <Image
           src={"/premium.svg"}
@@ -49,7 +53,12 @@ export function PremiumCard() {
           Premium
         </p>
       </CardHeader>
-      <CardBody placeholder={undefined} className="mb-6 p-0">
+      <CardBody
+        placeholder={undefined}
+        className="mb-6 p-0"
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
+      >
         <p
           className={`font-thin text-[14px] sm:text-[15px] text-justify ${
             theme === "dark" ? "text-[#cccccc]" : "text-[#666666]"
