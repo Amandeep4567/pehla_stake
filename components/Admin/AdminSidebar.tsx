@@ -118,6 +118,8 @@ export default function AdminSidebar() {
         className={`flex flex-row-reverse justify-between font-manrope sticky top-0 max-w-none px-4 py-2 border-none shadow-none rounded-none backdrop-blur-none bg-white dark:bg-[#00171A] bg-opacity-100 z-10 bg-${
           theme === "dark" ? "[#003034]" : "[#FFFFFF]"
         }`}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
       >
         <div className="m-auto">
           <Typography
@@ -125,6 +127,8 @@ export default function AdminSidebar() {
             href="/"
             className="mr-4 cursor-pointer py-1.5 lg:ml-2"
             placeholder={undefined}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
           >
             <Image
               src={theme === "dark" ? pehlaStakeLight : pehlaStakeDark}
@@ -150,6 +154,8 @@ export default function AdminSidebar() {
           theme === "dark" ? "[#00171A]" : "[#FFFFFF]"
         } h-full rounded-md w-4/5`}
         placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
       >
         <Card
           shadow={false}
@@ -159,9 +165,15 @@ export default function AdminSidebar() {
           }}
           className="mr-2 w-full bg-transparent p-4 rounded-md"
           placeholder={undefined}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
         >
           <div className="mb-2 flex items-center gap-4 p-4">
-            <Typography placeholder={undefined}>
+            <Typography
+              placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
+            >
               <Image
                 src={pehlaStakeLight}
                 alt="PehlaStake"
@@ -194,18 +206,24 @@ export default function AdminSidebar() {
                 size="lg"
                 className="rounded-lg"
                 placeholder={undefined}
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
               />
               <div>
                 <Typography
                   variant="h5"
                   placeholder={undefined}
                   className="dark:text-[#ffffff] text-[#00171A] font-manrope"
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
                 >
                   Admin Name
                 </Typography>
                 <Typography
                   placeholder={undefined}
                   className="dark:text-[#ffffff] text-[#00171A] font-manrope font-medium"
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
                 >
                   Administrator
                 </Typography>
@@ -215,6 +233,8 @@ export default function AdminSidebar() {
             <List
               className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1"
               placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               <div>
                 <Typography
@@ -222,12 +242,16 @@ export default function AdminSidebar() {
                   variant="small"
                   className="font-medium cursor-pointer"
                   placeholder={undefined}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
                 >
                   <ListItem
                     className={`font-manrope flex items-center dark:text-[#ffffff] text-[#00171A] gap-2 py-2 pr-4 font-medium hover:bg-[#103B3E] hover:text-white`}
                     selected={isDashboardMenuOpen}
                     onClick={() => setIsDashboardMenuOpen((cur) => !cur)}
                     placeholder={undefined}
+                    onPointerEnterCapture={undefined}
+                    onPointerLeaveCapture={undefined}
                   >
                     Dashboard
                     <ChevronDownIcon
@@ -266,10 +290,14 @@ export default function AdminSidebar() {
                       : "text-[#ffffff]"
                   } hover:bg-[#103B3E] hover:text-white dark:text-[#ffffff] text-[#00171A] font-manrope`}
                   placeholder={undefined}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
                 >
                   <ListItem
                     className={`flex items-center gap-2 py-2 pr-4 font-manrope `}
                     placeholder={undefined}
+                    onPointerEnterCapture={undefined}
+                    onPointerLeaveCapture={undefined}
                   >
                     {navItem.title}
                   </ListItem>

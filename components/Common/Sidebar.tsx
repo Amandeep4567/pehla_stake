@@ -105,6 +105,8 @@ export default function Sidebar() {
         theme === "dark" ? "[#103B3E]" : "[#D3D3D3]"
       } hover:text-${theme === "dark" ? "white" : "black"} rounded-xl ml-4`}
       onClick={() => handleMenuItemClick(item.path)}
+      onPointerEnterCapture={undefined}
+      onPointerLeaveCapture={undefined}
     >
       <Typography
         as="span"
@@ -112,6 +114,8 @@ export default function Sidebar() {
         className={`text-${theme === "dark" ? "white" : "black"} mr-auto pl-2 ${
           manrope.className
         }`}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
       >
         {item.title}
       </Typography>
@@ -127,6 +131,8 @@ export default function Sidebar() {
             theme === "dark" ? "[#103B3E]" : "[#D3D3D3]"
           } hover:text-${theme === "dark" ? "white" : "black"}`}
           onClick={() => handleMenuItemClick(item.path)}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
         >
           <Typography
             as="span"
@@ -134,6 +140,8 @@ export default function Sidebar() {
             className={`text-${
               theme === "dark" ? "white" : "black"
             } text-[16px] mr-auto font-normal ${manrope.className} p-2`}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
           >
             {item.title}
           </Typography>
@@ -150,6 +158,8 @@ export default function Sidebar() {
               }`}
             />
           }
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
         >
           <ListItem
             placeholder=""
@@ -158,21 +168,35 @@ export default function Sidebar() {
             } hover:text-${theme === "dark" ? "white" : "black"}`}
             selected={open === item.id}
             onClick={() => handleOpen(item.id)}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
           >
-            <AccordionHeader placeholder="" className="border-b-0 p-2">
+            <AccordionHeader
+              placeholder=""
+              className="border-b-0 p-2"
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
+            >
               <Typography
                 as="span"
                 placeholder=""
                 className={`text-${
                   theme === "dark" ? "white" : "black"
                 } text-[16px] mr-auto font-normal ${manrope.className}`}
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
               >
                 {item.title}
               </Typography>
             </AccordionHeader>
           </ListItem>
           <AccordionBody className="py-1">
-            <List placeholder="" className="p-0">
+            <List
+              placeholder=""
+              className="p-0"
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
+            >
               {navRenderedItems}
             </List>
           </AccordionBody>
@@ -189,6 +213,8 @@ export default function Sidebar() {
         className={`flex flex-row-reverse justify-between font-manrope sticky top-0 max-w-none px-4 py-2 border-none shadow-none rounded-none backdrop-blur-none bg-white dark:bg-[#00171A] bg-opacity-100 z-10 bg-${
           theme === "dark" ? "[#003034]" : "[#FFFFFF]"
         }`}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
       >
         <div className="m-auto">
           <Typography
@@ -196,6 +222,8 @@ export default function Sidebar() {
             href="/"
             className="mr-4 cursor-pointer py-1.5 lg:ml-2"
             placeholder={undefined}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
           >
             <Image
               src={theme === "dark" ? PehlaStakeLight : PehlaStakeDark}
@@ -221,6 +249,8 @@ export default function Sidebar() {
         className={`bg-${
           theme === "dark" ? "[#00171A]" : "[#FFFFFF]"
         } h-full rounded-md w-4/5`}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
       >
         <Card
           placeholder=""
@@ -230,9 +260,15 @@ export default function Sidebar() {
             overflowY: "scroll",
           }}
           className="mr-2 w-full bg-transparent p-4 rounded-md"
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
         >
           <div className="mb-2 flex items-center gap-4 p-4">
-            <Typography placeholder="">
+            <Typography
+              placeholder=""
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
+            >
               <Image
                 src={theme === "dark" ? PehlaStakeLight : PehlaStakeDark}
                 alt="PehlaStake"
@@ -241,7 +277,13 @@ export default function Sidebar() {
               />
             </Typography>
           </div>
-          <List placeholder="">{renderedItem}</List>
+          <List
+            placeholder=""
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
+          >
+            {renderedItem}
+          </List>
           <div className="flex flex-col justify-end mt-52">
             <div className="flex flex-col py-4 gap-4" onClick={closeDrawer}>
               <Link href="/auth/signin">

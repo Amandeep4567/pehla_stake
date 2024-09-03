@@ -120,6 +120,8 @@ export default function BusinessSidebar() {
       } hover:text-${theme === "dark" ? "white" : "black"} rounded-xl ml-4`}
       onClick={() => handleMenuItemClick(item.path)}
       placeholder={undefined}
+      onPointerEnterCapture={undefined}
+      onPointerLeaveCapture={undefined}
     >
       <Typography
         as="span"
@@ -127,6 +129,8 @@ export default function BusinessSidebar() {
           manrope.className
         }`}
         placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
       >
         {item.title}
       </Typography>
@@ -142,6 +146,8 @@ export default function BusinessSidebar() {
           } hover:text-${theme === "dark" ? "white" : "black"}`}
           onClick={() => handleMenuItemClick(item.path)}
           placeholder={undefined}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
         >
           <Typography
             as="span"
@@ -149,6 +155,8 @@ export default function BusinessSidebar() {
               theme === "dark" ? "white" : "black"
             } text-[16px] mr-auto font-normal ${manrope.className} p-2`}
             placeholder={undefined}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
           >
             {item.title}
           </Typography>
@@ -165,6 +173,8 @@ export default function BusinessSidebar() {
             />
           }
           placeholder={undefined}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
         >
           <ListItem
             className={`p-0 hover:bg-${
@@ -173,21 +183,35 @@ export default function BusinessSidebar() {
             selected={open === item?.id}
             onClick={() => handleOpen(item?.id)}
             placeholder={undefined}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
           >
-            <AccordionHeader className="border-b-0 p-2" placeholder={undefined}>
+            <AccordionHeader
+              className="border-b-0 p-2"
+              placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
+            >
               <Typography
                 as="span"
                 className={`text-${
                   theme === "dark" ? "white" : "black"
                 } text-[16px] mr-auto font-normal ${manrope.className}`}
                 placeholder={undefined}
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
               >
                 {item?.title}
               </Typography>
             </AccordionHeader>
           </ListItem>
           <AccordionBody className="py-1">
-            <List className="p-0" placeholder={undefined}>
+            <List
+              className="p-0"
+              placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
+            >
               {navRenderedItems}
             </List>
           </AccordionBody>
@@ -204,6 +228,8 @@ export default function BusinessSidebar() {
         className={`flex flex-row-reverse justify-between font-manrope sticky top-0 max-w-none px-4 py-2 border-none shadow-none rounded-none backdrop-blur-none bg-white dark:bg-[#00171A] bg-opacity-100 z-10 bg-${
           theme === "dark" ? "[#003034]" : "[#FFFFFF]"
         }`}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
       >
         <div className="m-auto">
           <Typography
@@ -211,6 +237,8 @@ export default function BusinessSidebar() {
             href="/"
             className="mr-4 cursor-pointer py-1.5 lg:ml-2"
             placeholder={undefined}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
           >
             <Image
               src={theme === "dark" ? PehlaStakeLight : PehlaStakeDark}
@@ -236,6 +264,8 @@ export default function BusinessSidebar() {
           theme === "dark" ? "[#00171A]" : "[#FFFFFF]"
         } h-full rounded-md w-4/5`}
         placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
       >
         <Card
           shadow={false}
@@ -245,9 +275,15 @@ export default function BusinessSidebar() {
           }}
           className="mr-2 w-full bg-transparent p-4 rounded-md"
           placeholder={undefined}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
         >
           <div className="mb-2 flex items-center justify-between gap-4 p-4">
-            <Typography placeholder={undefined}>
+            <Typography
+              placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
+            >
               <Image
                 src={theme === "dark" ? PehlaStakeLight : PehlaStakeDark}
                 alt="PehlaStake"
@@ -273,18 +309,24 @@ export default function BusinessSidebar() {
               size="lg"
               className="rounded-lg"
               placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             />
             <div>
               <Typography
                 variant="h5"
                 placeholder={undefined}
                 className="dark:text-[#ffffff] text-[#00171A] font-manrope"
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
               >
                 Business Name
               </Typography>
               <Typography
                 placeholder={undefined}
                 className="dark:text-[#ffffff] text-[#00171A] font-manrope font-medium"
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
               >
                 Business
               </Typography>
@@ -299,6 +341,8 @@ export default function BusinessSidebar() {
                     : "bg-[#f0f0f0] text-[#00171A]"
                 }`}
                 placeholder={undefined}
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
               >
                 <ChatBubbleLeftIcon className="h-4 w-4 mr-1 text-gray-400" />
                 Chat
@@ -317,7 +361,13 @@ export default function BusinessSidebar() {
               </div>
             </Link>
           </div>
-          <List placeholder={undefined}>{renderedItem}</List>
+          <List
+            placeholder={undefined}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
+          >
+            {renderedItem}
+          </List>
         </Card>
       </Drawer>
     </>
