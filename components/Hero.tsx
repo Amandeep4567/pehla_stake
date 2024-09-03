@@ -62,6 +62,8 @@ export default function Hero() {
               placeholder=""
               size="sm"
               className="right-1 top-1 rounded-full bg-[#248E38] dark:bg-[#B8FF22]"
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               <MagnifyingGlassIcon className="p-0 h-4 w-4" />
             </Button>
