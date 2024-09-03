@@ -108,8 +108,10 @@ function NavList({ onMenuItemClick, selectedItem }: NavListMenuProps) {
 
   return (
     <List
-      placeholder={undefined}
       className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1"
+      placeholder={undefined}
+      onPointerEnterCapture={undefined}
+      onPointerLeaveCapture={undefined}
     >
       <Menu
         open={isDashboardMenuOpen}
@@ -124,12 +126,16 @@ function NavList({ onMenuItemClick, selectedItem }: NavListMenuProps) {
             as="div"
             variant="small"
             className="font-medium"
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
           >
             <ListItem
               placeholder={undefined}
               className={`font-manrope flex items-center gap-2 py-2 pr-4 font-medium text-white hover:bg-[#103B3E] hover:text-white`}
               selected={isDashboardMenuOpen}
               onClick={() => setIsDashboardMenuOpen((cur) => !cur)}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               {selectedItem}
               <ChevronDownIcon
@@ -150,6 +156,8 @@ function NavList({ onMenuItemClick, selectedItem }: NavListMenuProps) {
         <MenuList
           className="hidden max-w-screen-xl rounded-xl lg:block bg-[#143e41] border-none"
           placeholder={undefined}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
         >
           <ul className="grid grid-cols-1 gap-y-2 outline-none">
             {navbarList[0].items?.map((item, index) => (
@@ -179,10 +187,14 @@ function NavList({ onMenuItemClick, selectedItem }: NavListMenuProps) {
             className={`font-medium ${
               isActive("/" + navItem.path) ? "text-[#B8FF22]" : "text-[#ffffff]"
             } hover:bg-[#103B3E] hover:text-white font-manrope`}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
           >
             <ListItem
               placeholder={undefined}
               className={`flex items-center gap-2 py-2 pr-4 font-manrope`}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               {navItem.title}
             </ListItem>
@@ -214,6 +226,8 @@ export default function AdminNavbar() {
         <Navbar
           placeholder={undefined}
           className={`font-manrope sticky top-0 max-w-none px-4 py-2 border-none shadow-none rounded-none backdrop-blur-none bg-white dark:bg-[#00171A] bg-opacity-100 z-10`}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
         >
           <div className="flex items-center justify-between">
             <Typography
@@ -221,6 +235,8 @@ export default function AdminNavbar() {
               as="a"
               href="/Admin/homepage"
               className="mr-4 cursor-pointer py-1.5 lg:ml-2"
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               <Image
                 src={pehlaStakeLight}

@@ -63,6 +63,8 @@ function NavListMenu() {
       <MenuItem
         placeholder=""
         className="flex items-center gap-3 rounded-lg hover:bg-[#103B3E] hover:text-white"
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
       >
         <div>
           <Typography
@@ -71,6 +73,8 @@ function NavListMenu() {
             className={`last:flex items-center text-sm font-semibold ${
               theme === "dark" ? "text-white" : "text-black"
             } font-manrope`}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
           >
             {title}
           </Typography>
@@ -94,6 +98,8 @@ function NavListMenu() {
             as="div"
             variant="small"
             className="font-medium"
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
           >
             <ListItem
               placeholder=""
@@ -102,6 +108,8 @@ function NavListMenu() {
               } hover:bg-[#103B3E] hover:text-white`}
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               {activeMenuItem}
               <ChevronDownIcon
@@ -124,6 +132,8 @@ function NavListMenu() {
             theme === "dark" ? "bg-[#143e41] text-white" : "bg-white text-black"
           } border-none`}
           placeholder={undefined}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
         >
           <ul className="grid grid-cols-1 gap-y-2 outline-none">
             {navListMenuItems.map((item, index) => (
@@ -159,6 +169,8 @@ function NavList() {
     <List
       placeholder=""
       className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1"
+      onPointerEnterCapture={undefined}
+      onPointerLeaveCapture={undefined}
     >
       {navbarList.map((navItem, index) => (
         <Typography
@@ -174,10 +186,14 @@ function NavList() {
               ? "text-[#ffffff]"
               : "text-[#00171A]"
           } hover:bg-[#103B3E] rounded-xl hover:text-white font-manrope`}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
         >
           <ListItem
             placeholder=""
             className={`flex items-center gap-2 py-2 pr-4 font-manrope`}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
           >
             {navItem.title}
           </ListItem>
@@ -214,6 +230,8 @@ export default function BusinessNavbar() {
               ? "bg-[#00171A] text-white"
               : "bg-[#ffffff] text-black"
           }`}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
         >
           <div className="flex items-center justify-between">
             <Typography
@@ -221,6 +239,8 @@ export default function BusinessNavbar() {
               as="a"
               href="/Businesses/homepage"
               className="mr-4 cursor-pointer py-1.5 lg:ml-2"
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               <Image
                 src={theme === "dark" ? PehlaStakeLight : PehlaStakeDark}
@@ -246,6 +266,8 @@ export default function BusinessNavbar() {
                         : "bg-[#f0f0f0] text-[#00171A]"
                     }`}
                     placeholder={undefined}
+                    onPointerEnterCapture={undefined}
+                    onPointerLeaveCapture={undefined}
                   >
                     <ChatBubbleLeftIcon className="h-4 w-4 mr-1 text-gray-400" />
                     Chat
@@ -278,6 +300,8 @@ export default function BusinessNavbar() {
                     color="blue-gray"
                     className="flex items-center gap-1 rounded-full py-0.5 pr-2 pl-0.5 lg:ml-auto"
                     placeholder={undefined}
+                    onPointerEnterCapture={undefined}
+                    onPointerLeaveCapture={undefined}
                   >
                     <Avatar
                       variant="circular"
@@ -286,6 +310,8 @@ export default function BusinessNavbar() {
                       className="border border-gray-900 p-0.5"
                       src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
                       placeholder={undefined}
+                      onPointerEnterCapture={undefined}
+                      onPointerLeaveCapture={undefined}
                     />
                     <ChevronDownIcon
                       strokeWidth={2.5}
@@ -302,6 +328,8 @@ export default function BusinessNavbar() {
                       : "bg-[#f0f0f0] text-[#00171A]"
                   } border-none mt-2`}
                   placeholder={undefined}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
                 >
                   {profileMenuItems.map(({ label, icon, path }, key) => {
                     const isLastItem = key === profileMenuItems.length - 1;
@@ -316,6 +344,8 @@ export default function BusinessNavbar() {
                               : ""
                           }`}
                           placeholder={undefined}
+                          onPointerEnterCapture={undefined}
+                          onPointerLeaveCapture={undefined}
                         >
                           {React.createElement(icon, {
                             className: `h-4 w-4 ${
@@ -329,6 +359,8 @@ export default function BusinessNavbar() {
                             className="font-manrope font-semibold"
                             color={isLastItem ? "red" : "inherit"}
                             placeholder={undefined}
+                            onPointerEnterCapture={undefined}
+                            onPointerLeaveCapture={undefined}
                           >
                             {label}
                           </Typography>
