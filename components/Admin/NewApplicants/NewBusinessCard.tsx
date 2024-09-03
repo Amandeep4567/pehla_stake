@@ -5,7 +5,7 @@ import { Business } from "@/types";
 import { useRouter } from "next/router";
 
 interface BusinessCardProps {
-  business: Business; 
+  business: Business;
 }
 
 export function NewBusinessCard({ business }: BusinessCardProps) {
@@ -25,6 +25,8 @@ export function NewBusinessCard({ business }: BusinessCardProps) {
       shadow={false}
       className={`w-full bg-[#003034] rounded-lg px-4 text-white`}
       placeholder={undefined}
+      onPointerEnterCapture={undefined}
+      onPointerLeaveCapture={undefined}
     >
       <CardHeader
         color="transparent"
@@ -32,17 +34,24 @@ export function NewBusinessCard({ business }: BusinessCardProps) {
         shadow={false}
         className="mx-0 flex justify-between items-center gap-4 pt-0 pb-8 border-none rounded-none"
         placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
       >
         <Image src={"/building.svg"} alt="building" width={50} height={50} />
         <p className="text-[16px] font-semibold tracking-wide text-white">
           {business.name} - {business.industry}
         </p>
       </CardHeader>
-      <CardBody className="mb-6 p-0" placeholder={undefined}>
+      <CardBody
+        className="mb-6 p-0"
+        placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
+      >
         <p className="font-thin text-[14px] text-[#cccccc] text-justify">
-          Investment opportunity in {business.district}, {business.State} requiring ₹
-          {business.InvestmentRangeEnd.toLocaleString()}. Established in{" "}
-          {business.establishedDate}.
+          Investment opportunity in {business.district}, {business.State}{" "}
+          requiring ₹{business.InvestmentRangeEnd.toLocaleString()}. Established
+          in {business.establishedDate}.
         </p>
         <div className="bg-[#103B3E] p-2 rounded-md border border-[#B8FF22] mt-2">
           <div className="flex justify-between">

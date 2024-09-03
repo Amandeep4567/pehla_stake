@@ -25,6 +25,8 @@ export function NewInvestorsCard({ investors }: InvestorsCardProps) {
       color="transparent"
       shadow={false}
       className={`w-full bg-[#003034] rounded-lg px-4  text-white`}
+      onPointerEnterCapture={undefined}
+      onPointerLeaveCapture={undefined}
     >
       <CardHeader
         placeholder=""
@@ -32,6 +34,8 @@ export function NewInvestorsCard({ investors }: InvestorsCardProps) {
         floated={false}
         shadow={false}
         className="mx-0 flex justify-start items-center gap-4 pt-0 pb-4 rounded-none border-none"
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
       >
         <Image
           src={"/Buyers.svg"}
@@ -49,7 +53,12 @@ export function NewInvestorsCard({ investors }: InvestorsCardProps) {
           </p>
         </div>
       </CardHeader>
-      <CardBody placeholder="" className="mb-6 p-0">
+      <CardBody
+        placeholder=""
+        className="mb-6 p-0"
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
+      >
         <div className="text-justify mt-3">
           <p className="text-[#cccccc] text-[14px] sm:text-[15px]">
             <span className="font-semibold tracking-wider text-[#ffffff]">

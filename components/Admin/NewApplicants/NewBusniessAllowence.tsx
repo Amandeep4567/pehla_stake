@@ -2,7 +2,11 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { Progress } from "@material-tailwind/react";
 import { Business } from "@/types";
-import {getBusiness, delBusiness, updateBusiness} from '../../../hooks/useBusiness';
+import {
+  getBusiness,
+  delBusiness,
+  updateBusiness,
+} from "../../../hooks/useBusiness";
 import Modal from "@/components/Admin/Model";
 
 interface ModalState {
@@ -22,16 +26,16 @@ const NewBusinessAllowence = () => {
     title: "",
     content: "",
   });
- 
+
   useEffect(() => {
     const fn = async () => {
-    if (id) {
-      const selectedBusiness = await getBusiness(id)
-      console.log(selectedBusiness)
-      setBusiness(selectedBusiness);
-    }
-  }
-  fn()
+      if (id) {
+        const selectedBusiness = await getBusiness(id);
+        console.log(selectedBusiness);
+        setBusiness(selectedBusiness);
+      }
+    };
+    fn();
   }, []);
 
   const handleViewDocument = () => {
@@ -45,11 +49,11 @@ const NewBusinessAllowence = () => {
   };
 
   const handleApprove = () => {
-  updateBusiness(id)
+    updateBusiness(id);
   };
 
   const handleBanAccount = () => {
-     delBusiness(id);
+    delBusiness(id);
   };
 
   const handleSuggestChanges = () => {
@@ -64,7 +68,7 @@ const NewBusinessAllowence = () => {
   const closeModal = () => {
     setModal({ show: false, title: "", content: "" });
   };
-  console.log("business", business)
+  console.log("business", business);
   if (!business) {
     return <div>Loading...</div>;
   }
@@ -95,6 +99,8 @@ const NewBusinessAllowence = () => {
                 size="lg"
                 color="green"
                 placeholder={undefined}
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
               />
             </div>
             <p className="text-[#A4E320]">
@@ -117,7 +123,7 @@ const NewBusinessAllowence = () => {
           <h4 className="text-md font-semibold">
             District:
             <span className="text-md text-gray-400 font-thin ml-2">
-            {business.district}, {business.State}z
+              {business.district}, {business.State}z
             </span>
           </h4>
           <h4 className="text-md font-semibold">
